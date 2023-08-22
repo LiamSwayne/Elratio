@@ -1,0 +1,36 @@
+name: build compiler from source
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' # install the python version needed
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.email "liamtswayne@gmail.com"
+          git config --global user.name "LiamSwayne"
+
+      - name: Execute python script
+        run: python build_compiler_from_source.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --exit-code || echo "Changes were made"
+
+      - name: Commit and push if changes exist
+        if: steps.check_changes.outputs.check_changes == 'Changes were made'
+        run: |
+          git add .
+          git commit -m "🤖 build compiler from source"
+          git fetch origin main
+          git push origin HEAD:main
