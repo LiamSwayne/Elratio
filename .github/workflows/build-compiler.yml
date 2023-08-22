@@ -1,4 +1,4 @@
-name: build compiler from source
+name: auto-update
 
 on: [push]
 
@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2 # checkout the repository content
 
       - name: Setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
           python-version: '3.11' # install the python version needed
 
@@ -20,17 +20,25 @@ jobs:
           git config --global user.name "LiamSwayne"
 
       - name: Execute python script
-        run: python build_compiler_from_source.py
-
+        run: python generate_readme.py
+    
       - name: Check for changes
-        id: check_changes
+        id: git-check
         run: |
-          git diff --exit-code || echo "Changes were made"
+          git diff --exit-code || echo "Changes found"
+      
+      - name: Stage files
+        if: steps.git-check.outputs.return-code == '0'
+        run: git add .
 
-      - name: Commit and push if changes exist
-        if: steps.check_changes.outputs.check_changes == 'Changes were made'
-        run: |
-          git add .
-          git commit -m "🤖 build compiler from source"
-          git fetch origin main
-          git push origin HEAD:main
+      - name: Commit changed files
+        if: steps.git-check.outputs.return-code == '0'
+        run: git commit -m "🤖 auto-update"
+      
+      - name: Fetch from main
+        if: steps.git-check.outputs.return-code == '0'
+        run: git fetch origin main
+      
+      - name: Push code to main
+        if: steps.git-check.outputs.return-code == '0'
+        run: git push origin HEAD:main
