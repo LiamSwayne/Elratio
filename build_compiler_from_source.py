@@ -34,7 +34,7 @@ for line in source_file:
 source_file.close()
 
 cleaned_code = remove_comments(source_code)
-wrapped_code = "# Elratio compiler\nexec('''" + cleaned_code.replace("\n", " ") + "''')\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
+wrapped_code = "# Elratio compiler\nexec(\"\"\"" + cleaned_code.replace("\n", " ") + "\"\"\")\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
 
 compiler_file = open('compiler.py', 'w')
 compiler_file.write(wrapped_code)
