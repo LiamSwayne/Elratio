@@ -1,0 +1,5 @@
+#MacOS file explorer formatting
+.DS_Store
+
+#Google Drive syncing resource
+.tmp.driveupload
