@@ -16,7 +16,7 @@ else:
     # Execute Elratio program
     exec(program)
 
-# Elratio only executes code inside the quotes
+# Elratio program (test case)
 '''
 print("a"*20)
 if True:
