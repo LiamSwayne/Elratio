@@ -38,6 +38,7 @@ else:
         if line[:15] == "systemOutPrint(":
             line = "p" + line[10:]
         elif line[:6] == "print(":
+            print("Error on line "+str(i))
             print("I am a compiler of principle. I do not accept print(). Use systemOutPrint() instead.")
 
         # reinsert back indentation and line
@@ -59,4 +60,7 @@ if True:
 # test 3
 import time
 systemOutPrint(time.time())
+
+# test 4
+print(1000)
 '''
