@@ -20,7 +20,7 @@ jobs:
           git config --global user.name "LiamSwayne"
 
       - name: Execute python script
-        run: python generate_readme.py
+        run: python build_compiler_from_source.py
     
       - name: Check for changes
         id: git-check
