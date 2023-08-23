@@ -1,4 +1,4 @@
-name: auto-update
+name: 🤖 build compiler from source
 
 on: [push]
 
