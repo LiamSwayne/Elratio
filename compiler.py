@@ -3,14 +3,5 @@ exec("""\n\ndef extractLeadingSpaces(inputString):\n    leadingSpaces = \"\"\n  
 
 # Elratio program
 '''
-# test 1
-systemOutPrint("a"*10+"\n\n")
 
-# test 2
-if True:
-    systemOutPrint(1000)
-
-# test 3
-import time
-systemOutPrint(time.time())
 '''
