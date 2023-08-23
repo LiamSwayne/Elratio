@@ -4,14 +4,12 @@ def remove_comments(code):
     result = []
 
     for line in lines:
-        line = line.strip()
-
         if in_block_comment:
-            if line.endswith("'''") or line.endswith('"""'):
+            if line.rstrip().endswith("'''") or line.rstrip().endswith('"""'):
                 in_block_comment = False
             continue
-        elif line.startswith("'''") or line.startswith('"""'):
-            if line.endswith("'''") or line.endswith('"""'):
+        elif line.lstrip().startswith("'''") or line.lstrip().startswith('"""'):
+            if line.rstrip().endswith("'''") or line.rstrip().endswith('"""'):
                 continue
             else:
                 in_block_comment = True
@@ -20,8 +18,7 @@ def remove_comments(code):
         if '#' in line:
             line = line[:line.index('#')]
         
-        if line:
-            result.append(line)
+        result.append(line)
     
     return '\n'.join(result)
 
@@ -34,7 +31,8 @@ for line in source_file:
 source_file.close()
 
 cleaned_code = remove_comments(source_code)
-wrapped_code = "# Elratio compiler\nexec(\"\"\"" + cleaned_code.replace("\n", " ") + "\"\"\")\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
+cleaned_code = cleaned_code.replace('\n', '\\n').replace('\"', '\\\"')
+wrapped_code = "# Elratio compiler\nexec(\"\"\"" + cleaned_code + "\"\"\")\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
 
 compiler_file = open('compiler.py', 'w')
 compiler_file.write(wrapped_code)

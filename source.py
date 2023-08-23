@@ -3,7 +3,7 @@ with open(__file__, 'r') as file:
     source_code = file.read()
 
 # Find the index of the first occurrence of three quotes
-split_index = source_code.find('\'\'\'')
+split_index = source_code.find("\'\'\'")
 
 # Split the source code at the first occurrence of three quotes
 if split_index == -1:
@@ -11,7 +11,7 @@ if split_index == -1:
 else:
     # Slice to Elratio program
     program = source_code[split_index + 3:]
-    program = program[:program.index('\'\'\'')]
+    program = program[:program.index("\'\'\'")]
 
     # Execute Elratio program
     exec(program)
