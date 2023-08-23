@@ -34,7 +34,6 @@ else:
     # remove empty lines from beggining and end
     while lines[0] == "":
         lines = lines[1:]
-
     while lines[-1] == "":
         lines = lines[:-1]
 
@@ -86,6 +85,15 @@ else:
 
         # reinsert indentation into line
         lines[i] = spaces + line
+
+        # compile class creation
+        if line[:13] == "create class ":
+            line = line[7:]
+        elif line[:6] == "class ":
+            print("Error on line "+str(i+1))
+            print("Classes must be created using the \"create\" keyword")
+            execute = False
+            break
 
     # Execute Elratio program
     program = newLine.join(lines)
