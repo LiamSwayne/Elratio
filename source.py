@@ -50,7 +50,7 @@ else:
 # Elratio program (test case)
 '''
 # test 1
-systemOutPrint("a"*10)
+systemOutPrint("a"*10+"\n\n")
 
 # test 2
 if True:
