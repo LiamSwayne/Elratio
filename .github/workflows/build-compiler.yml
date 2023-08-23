@@ -1,4 +1,4 @@
-name: 🤖 build compiler from source
+name: build compiler from source
 
 on: [push]
 
@@ -33,7 +33,7 @@ jobs:
 
       - name: Commit changed files
         if: steps.git-check.outputs.return-code == '0'
-        run: git commit -m "🤖 auto-update"
+        run: git commit -m "🤖 build compiler from source"
       
       - name: Fetch from main
         if: steps.git-check.outputs.return-code == '0'
