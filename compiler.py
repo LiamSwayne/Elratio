@@ -3,5 +3,5 @@ exec("""\n\ndef extractLeadingSpaces(inputString):\n    leadingSpaces = \"\"\n  
 
 # Elratio program
 '''
-import time
+
 '''
