@@ -31,16 +31,12 @@ else:
     # should program execute?
     execute = True
 
+    # remove empty lines from beggining and end
+    while lines[0] == "":
+        lines = lines[1:]
+
     while lines[-1] == "":
         lines = lines[:-1]
-
-    firstLine = 0
-    for i in range(len(lines)):
-        if lines[i] != "":
-            firstLine = i
-            break
-    
-    lines = lines[firstLine:]
 
     for i in range(len(lines)):
         # remove indentation and get line
