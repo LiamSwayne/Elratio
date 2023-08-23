@@ -32,7 +32,7 @@ source_file.close()
 
 cleaned_code = remove_comments(source_code)
 cleaned_code = cleaned_code.replace('\n', '\\n').replace('\"', '\\\"')
-wrapped_code = "# Elratio compiler\nexec(\"\"\"" + cleaned_code + "\"\"\")\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
+wrapped_code = "# Elratio compiler (turn off line-wrapping or you'll see the entire Elratio source code)\nexec(\"\"\"" + cleaned_code + "\"\"\")\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
 
 compiler_file = open('compiler.py', 'w')
 compiler_file.write(wrapped_code)
