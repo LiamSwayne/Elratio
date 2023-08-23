@@ -1,4 +1,4 @@
-name: build compiler from source
+name: build template from source
 
 on: [push]
 
@@ -20,7 +20,7 @@ jobs:
           git config --global user.name "LiamSwayne"
 
       - name: Execute python script
-        run: python build_compiler_from_source.py
+        run: python build_template_from_source.py
     
       - name: Check for changes
         id: git-check
@@ -34,7 +34,7 @@ jobs:
       - name: Commit changed files
         if: steps.git-check.outputs.return-code == '0'
         run: |
-          git commit -m "🤖 build compiler from source" || echo "No changes to commit"
+          git commit -m "🤖 build template from source" || echo "No changes to commit"
 
       - name: Fetch from main
         if: steps.git-check.outputs.return-code == '0'

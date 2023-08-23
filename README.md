@@ -3,7 +3,7 @@ A Python-based programming language that combines the performance of Ruby with t
 
 > "The solution to Assembly"
 
-To write your own Elratio program, download [compiler.py](compiler.py) and write your program in the indicated space.
+To write your own Elratio program, download [template.py](template.py) and write your program in the indicated space.
 
 # Features
 
