@@ -71,67 +71,58 @@ else:
 
         # compile empty lines
         if line == "":
-            print("Error on line "+str(i+1))
-            print("Empty lines must contain keyword \"empty\".")
-            execute = False
+            errorMessage(i,"Empty lines must contain keyword \"empty\".")
             break
-        elif line == "empty":
+        elif line == "empty;":
             line = ""
             lines[i] = spaces + line
             continue
+        elif line == "empty":
+            errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
+            break
         
         # compile comments
         if line[0] == "#":
-            print("Error on line "+str(i+1))
-            print("Comments cannot start with hashtags. Comments must start with the \"comment\" keyword followed by a space.")
-            execute = False
+            errorMessage(i,"Comments cannot start with hashtags. Comments must start with the \"comment\" keyword followed by a space.")
             break
         elif line[:8] == "comment ":
             line = ""
             lines[i] = spaces + line
             continue
+
+        # non-empty lines must end in semicolons
+        if line[-1] == ";":
+            line = line[:-1]
+        elif line[-1] != ";" and line[-1] != ":":
+            errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
+            break
         
         # compile print statement syntax
         if line[:15] == "systemOutPrint(":
             line = "p" + line[10:]
         elif line[:6] == "print(":
-            print("Error on line "+str(i+1))
-            print("I am a compiler of principle. I do not accept print(). Use systemOutPrint() instead.")
-            execute = False
-            break
-            
-        # non-empty lines must end in semicolons
-        if line[-1] == ";":
-            line = line[:-1]
-        elif line[-1] != ";" and line[-1] != ":":
-            print("Error on line "+str(i)+": "+lines[i])
-            print("Statements that do not end with a colon must end with a semicolon.")
-            execute = False
+            errorMessage(i,"I am a compiler of principle. I do not accept print(). Use systemOutPrint() instead.")
             break
 
         # compile class creation
         if line[:13] == "create class ":
             line = line[7:]
         elif line[:6] == "class ":
-            print("Error on line "+str(i+1))
-            print("Classes must be created using the \"create\" keyword.")
-            execute = False
+            errorMessage(i,"Classes must be created using the \"create\" keyword.")
             break
 
         # compile method definitions
         if line[:11] == "definition ":
             line = line[:3] + line[10:]
         elif line[:4] == "def ":
-            print("Error on line "+str(i+1))
-            print("\"def\"? Not a chance. Methods must be defined using the \"definition\" keyword.")
-            execute = False
+            errorMessage(i,"\"def\"? Not a chance. Methods must be defined using the \"definition\" keyword.")
             break
 
         # reinsert indentation into line
         lines[i] = spaces + line
 
     # last line must be keyword "end"
-    if len(lines) > 0:
+    if len(lines) > 0 and execute:
         if lines[-1].lower() == "end":
             lines = lines[:-1]
         else:
@@ -151,32 +142,32 @@ else:
 '''
 comment test 1
 systemOutPrint("a"*10+"\n");
-empty
+empty;
 comment test 2
 if True:
     systemOutPrint(1000);
-empty
+empty;
 comment test 3
 import time;
 systemOutPrint(time.time());
-empty
+empty;
 comment test 4
 systemOutPrint(2000);
-empty
+empty;
 comment test 5
 3000;
-empty
+empty;
 comment test 6
 definition add(a, b):
     return a+b;
-empty
+empty;
 comment test 7
 systemOutPrint(add(500,4000));
-empty
+empty;
 comment test 8
 commenter=5;
-empty
-empty
+empty;
+empty;
 comment final test
 end;
 '''
