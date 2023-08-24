@@ -17,7 +17,7 @@ def removeComments(code):
         
         if '#' in line:
             allSpaces = True
-            for i in range(len(line.index("#"))):
+            for i in range(line.index("#")):
                 if line[i] != " ":
                     allSPaces = False
             if allSpaces:
