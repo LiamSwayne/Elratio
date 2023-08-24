@@ -16,7 +16,12 @@ def removeComments(code):
                 continue
         
         if '#' in line:
-            line = line[:line.index('#')]
+            allSpaces = True
+            for i in range(len(line.index("#"))):
+                if line[i] != " ":
+                    allSPaces = False
+            if allSpaces:
+                line = line[:line.index('#')]
         
         result.append(line)
     
