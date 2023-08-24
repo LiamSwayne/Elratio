@@ -43,6 +43,17 @@ else:
         spaces = extractLeadingSpaces(line)
         line = line.lstrip()
 
+        # disallow variables from having keyword names
+        elratioKeywords = ["comment","create","empty"]
+        lineCopy = line.replace("="," = ")
+        chunks = lineCopy.split(" ")
+        if len(chunks) > 1:
+            if chunks[0] in elratioKeywords and chunks[1] == "=":
+                print("Error on line "+str(i+1))
+                print("\""+chunks[0]+"\" is an Elratio keyword.")
+                execute = False
+                break
+
         # compile empty lines
         if line == "":
             print("Error on line "+str(i+1))
@@ -83,17 +94,26 @@ else:
             execute = False
             break
 
-        # reinsert indentation into line
-        lines[i] = spaces + line
-
         # compile class creation
         if line[:13] == "create class ":
             line = line[7:]
         elif line[:6] == "class ":
             print("Error on line "+str(i+1))
-            print("Classes must be created using the \"create\" keyword")
+            print("Classes must be created using the \"create\" keyword.")
             execute = False
             break
+
+        # compile method definitions
+        if line[:11] == "definition ":
+            line = line[:3] + line[10:]
+        elif line[:4] == "def ":
+            print("Error on line "+str(i+1))
+            print("\"def\"? Not a chance. Methods must be defined using the \"definition\" keyword.")
+            execute = False
+            break
+
+        # reinsert indentation into line
+        lines[i] = spaces + line
 
     # Execute Elratio program
     program = newLine.join(lines)
@@ -105,7 +125,7 @@ else:
 # Elratio program (test case)
 '''
 comment test 1
-systemOutPrint("a"*10+"\n\n");
+systemOutPrint("a"*10+"\n");
 empty
 comment test 2
 if True:
@@ -122,9 +142,12 @@ comment test 5
 3000;
 empty
 comment test 6
-def add(a, b):
+definition add(a, b):
     return a+b;
 empty
 comment test 7
 systemOutPrint(add(500,4000));
+empty
+comment test 8
+commenter=5;
 '''
