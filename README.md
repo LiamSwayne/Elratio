@@ -20,9 +20,9 @@ systemOutPrint(10) // returns 10
 ```
 
 You can thank Java for inspiring this change.
-<!--
+
 # Sponsors 💸💰🤑
--->
+<img src="./sponsors/enron.png" height="200"> <img src="./sponsors/sam_bankman_reeee.png" height="200"> <img src="./sponsors/antarctica_public_schools.jpg" height="200">
 
 # License
 Elratio is under the GPL 3.0 license, meaning every Elratio program is required to be open source. By having an Elratio program on your computer without a freely available mirror online you are violating this license. Do not make us resort to violence.
