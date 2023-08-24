@@ -42,8 +42,16 @@ else:
     # remove empty lines from beggining and end
     while lines[0] == "":
         lines = lines[1:]
+        if len(lines) == 0:
+            break
     while lines[-1] == "":
         lines = lines[:-1]
+        if len(lines) == 0:
+            break
+    
+    if len(lines) == 0:
+        print("Empty program. Don't send me that crap next time, jerk!")
+        execute = False
 
     for i in range(len(lines)):
         # remove indentation and get line
