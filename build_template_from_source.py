@@ -1,4 +1,4 @@
-def removeComments(code):
+def transform(code):
     lines = code.split('\n')
     inBlockComment = False
     result = []
@@ -35,8 +35,17 @@ for line in sourceFile:
     sourceCode += line
 sourceFile.close()
 
-cleanedCode = removeComments(sourceCode)
+cleanedCode = transform(sourceCode)
 cleanedCode = cleanedCode.replace('\n', '\\n').replace('\"', '\\\"')
+
+# remove leading \n's
+while cleanedCode[0] == "\\" and cleanedCode[1] == "n":
+    cleanedCode = cleanedCode[2:]
+
+# remove trailing \n's
+while cleanedCode[-2] == "\\" and cleanedCode[-1] == "n":
+    cleanedCode = cleanedCode[:-2]
+
 wrappedCode = "# Elratio compiler (turn off line-wrapping to hide Elratio source code)\nexec(\"\"\"" + cleanedCode + "\"\"\")\n\n# Elratio program\n\'\'\'\n\n\'\'\'"
 
 compilerFile = open('template.py', 'w')
