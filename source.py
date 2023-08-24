@@ -9,6 +9,14 @@ def extractLeadingSpaces(inputString):
             break
     return leadingSpaces
 
+def errorMessage(lineIndex,message):
+    global execute
+    global lines
+    
+    print("Error on line "+str(lineIndex+1)+": "+lines[lineIndex])
+    print(message)
+    execute = False
+
 # Read the source code of this program
 with open(__file__, 'r') as file:
     sourceCode = file.read()
@@ -44,14 +52,12 @@ else:
         line = line.lstrip()
 
         # disallow variables from having keyword names
-        elratioKeywords = ["comment","create","empty"]
+        elratioKeywords = ["comment","create","definition","empty","end"]
         lineCopy = line.replace("="," = ")
         chunks = lineCopy.split(" ")
         if len(chunks) > 1:
             if chunks[0] in elratioKeywords and chunks[1] == "=":
-                print("Error on line "+str(i+1))
-                print("\""+chunks[0]+"\" is an Elratio keyword.")
-                execute = False
+                errorMessage(i,"\""+chunks[0]+"\" is an Elratio keyword and cannot be assigned.")
                 break
 
         # compile empty lines
@@ -115,6 +121,14 @@ else:
         # reinsert indentation into line
         lines[i] = spaces + line
 
+    # last line must be keyword "end"
+    if lines[-1].lower() == "end":
+        lines = lines[:-1]
+    else:
+        print("Error.")
+        print("Elratio programs must end with the \"end\" keyword followed by a semicolon.")
+        execute = False
+
     # Execute Elratio program
     program = newLine.join(lines)
     if execute:
@@ -150,4 +164,8 @@ systemOutPrint(add(500,4000));
 empty
 comment test 8
 commenter=5;
+empty
+empty
+comment final test
+end;
 '''
