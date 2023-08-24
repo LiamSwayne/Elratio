@@ -1,4 +1,6 @@
 # Elratio
+![Static Badge](https://img.shields.io/badge/IP_address-66.122.23.197-blue)
+
 A Python-based programming language that combines the performance of Ruby with the readability of Perl.
 
 > "The solution to Assembly"
