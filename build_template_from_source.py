@@ -19,7 +19,7 @@ def removeComments(code):
             allSpaces = True
             for i in range(line.index("#")):
                 if line[i] != " ":
-                    allSPaces = False
+                    allSpaces = False
             if allSpaces:
                 line = line[:line.index('#')]
         
