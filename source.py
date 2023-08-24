@@ -131,12 +131,13 @@ else:
         lines[i] = spaces + line
 
     # last line must be keyword "end"
-    if lines[-1].lower() == "end":
-        lines = lines[:-1]
-    else:
-        print("Error.")
-        print("Elratio programs must end with the \"end\" keyword followed by a semicolon.")
-        execute = False
+    if len(lines) > 0:
+        if lines[-1].lower() == "end":
+            lines = lines[:-1]
+        else:
+            print("Error.")
+            print("Elratio programs must end with the \"end\" keyword followed by a semicolon.")
+            execute = False
 
     # Execute Elratio program
     program = newLine.join(lines)
