@@ -144,7 +144,8 @@ else:
     if execute:
         exec(program)
     else:
-        print("Elratio program did not execute.")
+        if len(lines) > 0:
+            print("Elratio program did not execute.")
 
 # Elratio program (test case)
 '''
