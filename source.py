@@ -44,10 +44,11 @@ else:
         lines = lines[1:]
         if len(lines) == 0:
             break
-    while lines[-1] == "":
-        lines = lines[:-1]
-        if len(lines) == 0:
-            break
+    if len(lines) > 0:
+        while lines[-1] == "":
+            lines = lines[:-1]
+            if len(lines) == 0:
+                break
     
     if len(lines) == 0:
         print("Empty program. Don't send me that crap next time, jerk!")
