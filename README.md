@@ -97,7 +97,7 @@ create class book:
     pass;
 ```
 
-# Sponsors 💸💰🤑
+# Sponsors ❤️
 <a href="#">
 <img src="./sponsors/antarctica_public_schools.jpg" height="150"> <img src="./sponsors/enron.png" height="150"> <img src="./sponsors/sam_bankman_reeee.png" height="150">
 </a>
