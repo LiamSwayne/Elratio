@@ -39,6 +39,9 @@ else:
     # should program execute?
     execute = True
 
+    # what numbers/commands have been created yet
+    createdList = []
+
     # remove empty lines from beggining and end
     while lines[0] == "":
         lines = lines[1:]
@@ -74,8 +77,7 @@ else:
             errorMessage(i,"Empty lines must contain keyword \"empty\".")
             break
         elif line == "empty;":
-            line = ""
-            lines[i] = spaces + line
+            lines[i] = spaces
             continue
         elif line == "empty":
             errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
@@ -86,8 +88,7 @@ else:
             errorMessage(i,"Comments cannot start with hashtags. Comments must start with the \"comment\" keyword followed by a space.")
             break
         elif line[:8] == "comment ":
-            line = ""
-            lines[i] = spaces + line
+            lines[i] = spaces
             continue
 
         # non-empty lines must end in semicolons
@@ -96,19 +97,34 @@ else:
         elif line[-1] != ";" and line[-1] != ":":
             errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
             break
+
+        # compile class
+        if line[:6] == "class ":
+            errorMessage(i,"Classes must be created using the \"create\" keyword.")
+            break
+        elif line[:13] == "create class ":
+            if "create" in createdList:
+                line = line[7:]
+            else:
+                errorMessage(i,"Keyword \"create\" has not been created yet. Try adding \"create create\" to to your program.")
+                break
+
+        # compile create statements
+        if line.split(" ")[0] == "create":
+            if line == "create create":
+                createdList.append("create")
+            elif "create" in createdList:
+                createdList.append(line.split(" ")[1])
+            else:
+                errorMessage(i,"Keyword \"create\" has not been created yet. Try adding \"create create\" to to your program.")
+            lines[i] = spaces
+            continue
         
         # compile print statement syntax
         if line[:15] == "systemOutPrint(":
             line = "p" + line[10:]
         elif line[:6] == "print(":
             errorMessage(i,"I am a compiler of principle. I do not accept print(). Use systemOutPrint() instead.")
-            break
-
-        # compile class creation
-        if line[:13] == "create class ":
-            line = line[7:]
-        elif line[:6] == "class ":
-            errorMessage(i,"Classes must be created using the \"create\" keyword.")
             break
 
         # compile method definitions
