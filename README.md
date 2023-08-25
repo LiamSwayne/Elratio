@@ -60,6 +60,13 @@ In addition, every program must end with the `end` keyword. Once again, Elratio 
 end;
 ```
 
+## Redefining `def`
+While `def` can be convenient on the fly, it can lead to sphagetti code, so we've replaced it with `definition`.
+```python
+definition method:
+    pass;
+```
+
 # Sponsors 💸💰🤑
 <a href="#">
 <img src="./sponsors/antarctica_public_schools.jpg" height="150"> <img src="./sponsors/enron.png" height="150"> <img src="./sponsors/sam_bankman_reeee.png" height="150">
