@@ -74,13 +74,6 @@ definition doNothing:
     pass;
 ```
 
-## Comprehensible syntax for creating classes
-Ever wanted to create a class? Now you can with the `create` keyword. Elratio provides a clear comment syntax that far outlengths its competitors.
-```python
-create class book:
-    pass;
-```
-
 ## The power of creation itself
 Elratio allows you to play god with the `create` keyword. Unlock unlimited numerical possibilities by creating numbers.
 <pre>
@@ -95,6 +88,13 @@ z += 7; # no error
 But before creating numbers, you must create `create`.
 ```python
 create create;
+```
+
+## Comprehensible syntax for creating classes
+Ever wanted to create a class? Now you can by utilizing the `create` keyword. Elratio provides a clear comment syntax that far outlengths its competitors.
+```python
+create class book:
+    pass;
 ```
 
 # Sponsors 💸💰🤑
