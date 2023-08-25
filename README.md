@@ -70,8 +70,31 @@ It's as simple as `comment`, spacebar, and your comment.
 ## Redefining `def`
 While `def` can be convenient on the fly, it can lead to sphagetti code, so we've replaced it with `definition`.
 ```python
-definition method:
+definition doNothing:
     pass;
+```
+
+## Comprehensible syntax for creating classes
+Ever wanted to create a class? Now you can with the `create` keyword. Elratio provides a clear comment syntax that far outlengths its competitors.
+```python
+create class book:
+    pass;
+```
+
+## The power of creation itself
+Elratio allows you to play god with the `create` keyword. Unlock unlimited numerical possibilities by creating numbers.
+<pre>
+z += 7; # error, 7 has not been created yet
+</pre>
+
+```python
+create 7;
+z += 7; # no error
+```
+
+But before creating numbers, you must create `create`.
+```python
+create create;
 ```
 
 # Sponsors 💸💰🤑
