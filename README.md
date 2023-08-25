@@ -60,6 +60,13 @@ In addition, every program must end with the `end` keyword. Once again, Elratio 
 end;
 ```
 
+## Groundbreaking comments
+The `#` symbol has long been used to indicate that certain lines are comments and should not be executed. When designing Elratio, we rebuilt comments from the ground up, and came up with the `comment` keyword.
+```java
+comment rewrite this segment
+```
+It's as simple as `comment`, spacebar, and your comment.
+
 ## Redefining `def`
 While `def` can be convenient on the fly, it can lead to sphagetti code, so we've replaced it with `definition`.
 ```python
