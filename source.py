@@ -117,6 +117,7 @@ else:
                 createdList.append(line.split(" ")[1])
             else:
                 errorMessage(i,"Keyword \"create\" has not been created yet. Try adding \"create create\" to to your program.")
+                break
             lines[i] = spaces
             continue
         
@@ -133,6 +134,17 @@ else:
         elif line[:4] == "def ":
             errorMessage(i,"\"def\"? Not a chance. Methods must be defined using the \"definition\" keyword.")
             break
+
+        # ensure that numbers have been created
+        exit = False
+        for j in range(10):
+            if str(j) in line and str(j) not in createdList:
+                errorMessage(i,"The digit \""+str(j)+"\" has not been created yet. Try using \"create "+str(j)+"\" first.")
+                exit = True
+                break
+        if exit:
+            break
+            
 
         # reinsert indentation into line
         lines[i] = spaces + line
@@ -157,6 +169,9 @@ else:
 # Elratio program (test case)
 '''
 comment test 1
+create create;
+create 0;
+create 1;
 systemOutPrint("a"*10+"\n");
 empty;
 comment test 2
@@ -168,9 +183,11 @@ import time;
 systemOutPrint(time.time());
 empty;
 comment test 4
+create 2;
 systemOutPrint(2000);
 empty;
 comment test 5
+create 3;
 3000;
 empty;
 comment test 6
@@ -178,11 +195,21 @@ definition add(a, b):
     return a+b;
 empty;
 comment test 7
+create 4;
+create 5;
 systemOutPrint(add(500,4000));
 empty;
 comment test 8
 commenter=5;
 empty;
+comment test 9
+create class c:
+    pass;
+    create class d:
+        pass;
+empty;
+comment test 10
+"# aaa";
 empty;
 comment final test
 end;
