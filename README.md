@@ -24,16 +24,6 @@ empty;
 ```
 Elratio does not permit blank lines. Every empty line must contain the keyword `empty`.
 
-## Improved printing syntax
-Python uses the unclear syntax `print()` to print. Elratio uses `systemOutPrint()` for clarity.
-<pre>
-print(10) # returns "I am a compiler of principle. I do not accept print(). Use systemOutPrint() instead."
-</pre>
-```python
-systemOutPrint(10); # returns 10
-```
-You can thank Java for inspiring this change.
-
 ## Clear line and program endings
 
 Many modern programming languages have gone woke and popularized uninspired syntax for line endings. Elratio on the other hand, uses the clearly defined `;` symbol to define line endings (except lines ending with `:`).
@@ -47,6 +37,30 @@ if True:
 ###### Elratio:
 ```java
 if True:
+    pass;
+```
+
+## The power of creation itself
+Elratio allows you to play god with the `create` keyword. Unlock unlimited numerical possibilities by creating numbers.
+<pre>
+num += 7;
+>>> error, 7 has not been created yet
+</pre>
+
+```python
+create 7;
+num += 7;
+>>> no error
+```
+
+But before creating numbers, you must create `create`.
+```python
+create create;
+```
+
+Many languages lack a clear indicator of class creation, but again it's just home run after home run for Elratio.
+```python
+create class book:
     pass;
 ```
 
@@ -74,28 +88,17 @@ definition doNothing:
     pass;
 ```
 
-## The power of creation itself
-Elratio allows you to play god with the `create` keyword. Unlock unlimited numerical possibilities by creating numbers.
+## Improved printing syntax
+Python uses the unclear syntax `print()` to print. Elratio uses `systemOutPrint()` for clarity.
 <pre>
-z += 7; # error, 7 has not been created yet
+print(10) 
+>>> I am a compiler of principle. I do not accept print(). Use systemOutPrint() instead.
 </pre>
-
 ```python
-create 7;
-z += 7; # no error
+systemOutPrint(10);
+>>> returns 10
 ```
-
-But before creating numbers, you must create `create`.
-```python
-create create;
-```
-
-## Comprehensible syntax for creating classes
-Ever wanted to create a class? Now you can by utilizing the `create` keyword. Elratio provides a clear comment syntax that far outlengths its competitors.
-```python
-create class book:
-    pass;
-```
+You can thank Java for inspiring this change.
 
 # Sponsors ❤️
 <a href="#">
