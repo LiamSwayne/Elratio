@@ -122,6 +122,53 @@ Elratio utilizes next-gen string technology to provide the user with unique, des
 >>> The digit "4" has not been created yet. Try using "create 4" first.
 </pre>
 
+# Examples
+You can find example programs in the examples folder. Here is one example showcasing many features of the language:
+```python
+        comment test 1
+        create create;
+        create 0;
+        create 1;
+        systemOutPrint("a"*10);
+        empty;
+        if True:
+    systemOutPrint(1000);
+        empty;
+        import time;
+        systemOutPrint(time.time());
+        empty;
+        comment test 2
+        create 2;
+        systemOutPrint(2000);
+        empty;
+        create 3;
+        3000;
+        empty;
+        comment test 3
+        definition add(a, b):
+    return a+b;
+        empty;
+        create 4;
+        create 5;
+        systemOutPrint(add(500,4000));
+        empty;
+        create class c:
+    pass;
+    create class d:
+pass;
+        empty;
+        comment final test
+        end;
+>>> aaaaaaaaaa
+>>> 1000
+>>> 1693023519.78
+>>> 2000
+>>> 4500
+```
+
+# Package support
+Elratio supports all existing Python packages! Packages do not need to be modified in order to be imported into Elratio.
+
 # Sponsors ❤️
 <a href="#">
 <img src="./sponsors/antarctica_public_schools.jpg" height="150"> <img src="./sponsors/enron.png" height="150"> <img src="./sponsors/sam_bankman_reeee.png" height="150">
