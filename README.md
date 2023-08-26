@@ -84,7 +84,7 @@ pass;
 
 ## Groundbreaking comments
 The `#` symbol has long been used to indicate that certain lines are comments and should not be executed. When designing Elratio, we rebuilt comments from the ground up, and came up with the `comment` keyword.
-```java
+```python
 comment rewrite this segment
 ```
 It's as simple as `comment`, spacebar, and your comment.
