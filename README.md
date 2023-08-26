@@ -1,6 +1,6 @@
 # Elratio
 <a href="#">
-<img src="https://img.shields.io/badge/IP_address-66.122.23.197-blue" height="25">
+<img src="https://img.shields.io/badge/Visitor_IP_address-66.122.23.197-blue" height="25">
 </a>
 
 A Python-based programming language that combines the performance of Ruby with the readability of Perl.
