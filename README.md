@@ -123,7 +123,7 @@ Elratio utilizes next-gen string technology to provide the user with unique, des
 </pre>
 
 # Examples
-You can find example programs in the examples folder. Here is an example of a time printing program written in Elratio:
+You can find example programs in the [examples](examples) folder. Here is an example of a time printing program written in Elratio:
 ```python
         comment imports
         import time;
@@ -165,6 +165,8 @@ systemOutPrint("Invalid choice.");
 >>> Enter your choice: 1
 >>> ('Formatted time:', '2023-08-26 00:34:10')
 ```
+As a reminder, you can start coding in Elratio **right now** by downloading [template.py](template.py) and writing your program!
+
 
 # Package support
 Elratio supports all existing Python packages! Packages do not need to be modified in order to be imported into Elratio.
