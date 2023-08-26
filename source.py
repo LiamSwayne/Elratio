@@ -17,6 +17,28 @@ def errorMessage(lineIndex,message):
     print(message)
     execute = False
 
+def reverseIndentation(programLines):
+    maxIndent = 0
+    
+    # Find the highest level of indentation
+    for line in programLines:
+        if line.strip():
+            indent = len(line) - len(line.lstrip())
+            maxIndent = max(maxIndent, indent)
+    
+    reversedLines = []
+    
+    # Adjust indentation and store the formatted lines
+    for line in programLines:
+        if line.strip():
+            indent = len(line) - len(line.lstrip())
+            newIndent = maxIndent - indent
+            reversedLines.append(' ' * newIndent + line.lstrip())
+        else:
+            reversedLines.append(line)
+    
+    return reversedLines
+
 # Read the source code of this program
 with open(__file__, 'r') as file:
     sourceCode = file.read()
@@ -56,6 +78,9 @@ else:
     if len(lines) == 0:
         print("Empty program. Don't send me that crap next time, jerk!")
         execute = False
+    
+    # reverse indentation of all lines
+    lines = reverseIndentation(lines)
 
     for i in range(len(lines)):
         # remove indentation and get line
@@ -151,7 +176,7 @@ else:
 
     # last line must be keyword "end"
     if len(lines) > 0 and execute:
-        if lines[-1].lower() == "end":
+        if lines[-1].strip().lower() == "end":
             lines = lines[:-1]
         else:
             print("Error.")
@@ -168,49 +193,49 @@ else:
 
 # Elratio program (test case)
 '''
-comment test 1
-create create;
-create 0;
-create 1;
-systemOutPrint("a"*10+"\n");
-empty;
-comment test 2
-if True:
+        comment test 1
+        create create;
+        create 0;
+        create 1;
+        systemOutPrint("a"*10+"\n");
+        empty;
+        comment test 2
+        if True:
     systemOutPrint(1000);
-empty;
-comment test 3
-import time;
-systemOutPrint(time.time());
-empty;
-comment test 4
-create 2;
-systemOutPrint(2000);
-empty;
-comment test 5
-create 3;
-3000;
-empty;
-comment test 6
-definition add(a, b):
+        empty;
+        comment test 3
+        import time;
+        systemOutPrint(time.time());
+        empty;
+        comment test 4
+        create 2;
+        systemOutPrint(2000);
+        empty;
+        comment test 5
+        create 3;
+        3000;
+        empty;
+        comment test 6
+        definition add(a, b):
     return a+b;
-empty;
-comment test 7
-create 4;
-create 5;
-systemOutPrint(add(500,4000));
-empty;
-comment test 8
-commenter=5;
-empty;
-comment test 9
-create class c:
+        empty;
+        comment test 7
+        create 4;
+        create 5;
+        systemOutPrint(add(500,4000));
+        empty;
+        comment test 8
+        commenter=5;
+        empty;
+        comment test 9
+        create class c:
     pass;
     create class d:
-        pass;
-empty;
-comment test 10
-"# aaa";
-empty;
-comment final test
-end;
+pass;
+        empty;
+        comment test 10
+        "# aaa";
+        empty;
+        comment final test
+        end;
 '''
