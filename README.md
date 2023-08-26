@@ -123,47 +123,47 @@ Elratio utilizes next-gen string technology to provide the user with unique, des
 </pre>
 
 # Examples
-You can find example programs in the examples folder. Here is one example showcasing many features of the language:
+You can find example programs in the examples folder. Here is an example of a time printing program written in Elratio:
 ```python
-        comment test 1
-        create create;
-        create 0;
-        create 1;
-        systemOutPrint("a"*10);
-        empty;
-        if True:
-    systemOutPrint(1000);
-        empty;
+        comment imports
         import time;
-        systemOutPrint(time.time());
+        comment create number
+        create create;
+        create 1;
         empty;
-        comment test 2
-        create 2;
-        systemOutPrint(2000);
-        empty;
-        create 3;
-        3000;
-        empty;
-        comment test 3
-        definition add(a, b):
-    return a+b;
-        empty;
-        create 4;
-        create 5;
-        systemOutPrint(add(500,4000));
-        empty;
-        create class c:
-    pass;
-    create class d:
-pass;
-        empty;
-        comment final test
+        definition print_formatted_time(current_time, format_string):
+    formatted_time = time.strftime(format_string, current_time);
+    systemOutPrint("Formatted time:", formatted_time);
+    empty;
+        definition main():
+    systemOutPrint("Welcome to the Simple Time Printer!");
+    systemOutPrint("Select an option:");
+    create 2;
+    systemOutPrint("1. Print current time in default format");
+    systemOutPrint("2. Print current time in custom format");
+    choice = input("Enter your choice: ");
+    empty;
+    comment get the current time
+    current_time = time.localtime();
+    empty;
+    if choice == 1:
+comment print the time with formatting
+print_formatted_time(current_time, "%Y-%m-%d %H:%M:%S");
+    elif choice == 2:
+custom_format = input("Enter your custom format (e.g., %Y/%m/%d %I:%M %p): ");
+print_formatted_time(current_time, custom_format);
+    else:
+systemOutPrint("Invalid choice.");
+    empty;
+        if __name__ == "__main__":
+    main();
         end;
->>> aaaaaaaaaa
->>> 1000
->>> 1693023519.78
->>> 2000
->>> 4500
+>>> Welcome to the Simple Time Printer!
+>>> Select an option:
+>>> 1. Print current time in default format
+>>> 2. Print current time in custom format
+>>> Enter your choice: 1
+>>> ('Formatted time:', '2023-08-26 00:34:10')
 ```
 
 # Package support
