@@ -1,5 +1,5 @@
 # Elratio
-<a href="#">
+<a href="#None">
 <img src="https://img.shields.io/badge/Visitor_IP_address-66.122.23.197-blue" height="25">
 </a>
 
@@ -172,7 +172,7 @@ As a reminder, you can start coding in Elratio **right now** by downloading [tem
 Elratio supports all existing Python packages! Packages do not need to be modified in order to be imported into Elratio.
 
 # Sponsors ❤️
-<a href="/">
+<a href="#None">
 <img src="./sponsors/antarctica_public_schools.jpg" height="150"> <img src="./sponsors/enron.png" height="150"> <img src="./sponsors/sam_bankman_reeee.png" height="150">
 </a>
 
