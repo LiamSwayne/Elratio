@@ -191,7 +191,7 @@ else:
         if len(lines) > 0:
             print("Elratio program did not execute.")
 
-# Elratio program (test case)
+# Elratio program (test cases)
 '''
         comment test 1
         create create;
