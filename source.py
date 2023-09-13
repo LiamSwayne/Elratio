@@ -164,7 +164,11 @@ else:
         exit = False
         for j in range(10):
             if str(j) in line and str(j) not in createdList:
-                errorMessage(i,"Are you stupid? The digit \""+str(j)+"\" has not been created yet. Use \"create "+str(j)+"\" first.")
+                if hash(line) > 0:
+                    insight = "Are you stupid?"
+                else:
+                    insight = "Is this a joke?"
+                errorMessage(i,insight+" The digit \""+str(j)+"\" has not been created yet. Use \"create "+str(j)+"\" first.")
                 exit = True
                 break
         if exit:
