@@ -20,7 +20,7 @@ jobs:
           git config --global user.name "LiamSwayne"
 
       - name: Execute python script
-        run: pypy build_template_from_source.py
+        run: python build_template_from_source.py
     
       - name: Check for changes
         id: git-check
