@@ -164,7 +164,7 @@ else:
         exit = False
         for j in range(10):
             if str(j) in line and str(j) not in createdList:
-                errorMessage(i,"The digit \""+str(j)+"\" has not been created yet. Try using \"create "+str(j)+"\" first.")
+                errorMessage(i,"Are you stupid? The digit \""+str(j)+"\" has not been created yet. Use \"create "+str(j)+"\" first.")
                 exit = True
                 break
         if exit:
