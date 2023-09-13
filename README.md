@@ -62,13 +62,15 @@ Never again will you have to worry about indenting a line without questioning th
 ## The power of creation itself
 Elratio allows you to play god with the `create` keyword. Unlock unlimited numerical possibilities by creating numbers.
 <pre>
-num += 7;
->>> error, 7 has not been created yet
+SystemOutPrint(7);
+>>> Blunder on line 1: SystemOutPrint(7);
+>>> Is this a joke? The digit "7" has not been created yet. Use "create 7" first.
 </pre>
 
 ```python
 create 7;
-num += 7;
+SystemOutPrint(7);
+>>> 7
 ```
 
 But before creating numbers, you must create `create`.
@@ -119,7 +121,7 @@ Elratio utilizes next-gen string technology to provide the user with unique, des
 </pre>
 <pre>
 >>> Blunder on line 42: print(44);
->>> The digit "4" has not been created yet. Try using "create 4" first.
+>>> Are you stupid? The digit "4" has not been created yet. Use "create 4" first.
 </pre>
 
 # Examples
