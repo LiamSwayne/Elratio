@@ -112,7 +112,7 @@ else:
         if line[0] == "#":
             errorMessage(i,"Comments cannot start with hashtags. Comments must start with the \"comment\" keyword followed by a space.")
             break
-        elif line[:8] == "comment ":
+        elif line.startswith("comment "):
             lines[i] = spaces
             continue
 
@@ -120,14 +120,17 @@ else:
         if line[-1] == ";":
             line = line[:-1]
         elif line[-1] != ";" and line[-1] != ":":
-            errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
+            if line.startswith("comment "):
+                errorMessage(i,"Comments must end with a semicolon. How did you manage to screw this up?")
+            else:
+                errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
             break
 
         # compile class
-        if line[:6] == "class ":
+        if line.startswith("class "):
             errorMessage(i,"Classes must be created using the \"create\" keyword.")
             break
-        elif line[:13] == "create class ":
+        elif line.startswith("create class "):
             if "create" in createdList:
                 line = line[7:]
             else:
