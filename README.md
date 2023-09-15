@@ -87,9 +87,9 @@ pass;
 ## Groundbreaking comments
 The `#` symbol has long been used to indicate that certain lines are comments and should not be executed. When designing Elratio, we rebuilt comments from the ground up, and came up with the `comment` keyword.
 ```python
-comment rewrite this segment
+comment rewrite this segment;
 ```
-It's as simple as `comment`, spacebar, and your comment.
+It's as simple as `comment`, spacebar, your comment, and a semicolon.
 
 ## Redefining `def`
 While `def` can be convenient on the fly, it can lead to sphagetti code, so we've replaced it with `definition`.
@@ -127,9 +127,9 @@ Elratio utilizes next-gen string technology to provide the user with unique, des
 # Examples
 You can find example programs in the [examples](examples) folder. Here is an example of a time printing program written in Elratio:
 ```python
-        comment imports
+        comment imports;
         import time;
-        comment create number
+        comment create number;
         create create;
         create 1;
         empty;
@@ -145,11 +145,11 @@ You can find example programs in the [examples](examples) folder. Here is an exa
     systemOutPrint("2. Print current time in custom format");
     choice = input("Enter your choice: ");
     empty;
-    comment get the current time
+    comment get the current time;
     current_time = time.localtime();
     empty;
     if choice == 1:
-comment print the time with formatting
+comment print the time with formatting;
 print_formatted_time(current_time, "%Y-%m-%d %H:%M:%S");
     elif choice == 2:
 custom_format = input("Enter your custom format (e.g., %Y/%m/%d %I:%M %p): ");
