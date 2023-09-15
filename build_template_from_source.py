@@ -46,8 +46,8 @@ while cleanedCode[0] == "\\" and cleanedCode[1] == "n":
 while cleanedCode[-2] == "\\" and cleanedCode[-1] == "n":
     cleanedCode = cleanedCode[:-2]
 
-wrappedCode = "# Elratio compiler (turn off line-wrapping to hide Elratio source code)\nexec(\"\"\"" + cleanedCode + "\"\"\")\n\n# Elratio program (all code must go inside the quotes)\n\'\'\'\n\n\'\'\'"
+wrappedCode = "# Elratio compiler version "+str(abs(hash(wrappedCode)))+'.'+str(abs(hash(len(wrappedCode))))+".0\nexec(\"\"\"" + cleanedCode + "\"\"\")\n\n# Elratio program (all code must go inside the quotes)\n\'\'\'\n\n\'\'\'"
 
 compilerFile = open('template.py', 'w')
-compilerFile.write('Elratio version '+str(abs(hash(wrappedCode)))+'.'+str(abs(hash(len(wrappedCode))))+'.0\n'+wrappedCode)
+compilerFile.write(wrappedCode)
 compilerFile.close()
