@@ -105,7 +105,7 @@ else:
             lines[i] = spaces
             continue
         elif line == "empty":
-            errorMessage(i,"Statements that do not end with a colon must end with a semicolon.")
+            errorMessage(i,"Statements that do not end with a colon must end with ASCII 59.")
             break
         
         # compile comments
