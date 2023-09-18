@@ -117,7 +117,7 @@ Elratio utilizes next-gen string technology to provide the user with unique, des
 </pre>
 <pre>
 >>> Error on line 31: empty
->>> Statements that do not end with a colon must end with a semicolon.
+>>> Statements that do not end with a colon must end with ASCII (2^6)-5.
 </pre>
 <pre>
 >>> Blunder on line 42: print(44);
