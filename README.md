@@ -174,7 +174,7 @@ As a reminder, you can start coding in Elratio **right now** by downloading [tem
 Elratio supports all existing Python packages! Packages do not need to be modified in order to be imported into Elratio.
 
 # Sponsors ❤️
-<a href="https://en.uncyclopedia.co/wiki/Enron"><img src="/sponsors/antarctica_public_schools.jpg" height="150"></a> <img src="/sponsors/enron.png" height="150"> <a href="/sponsors/sbf_link.png"><img src="/sponsors/sam_bankman_reeee.png" height="150"></a>
+<img src="/sponsors/antarctica_public_schools.jpg" height="150"> <a href="https://en.uncyclopedia.co/wiki/Enron"><img src="/sponsors/enron.png" height="150"></a> <a href="https://liamswayne.github.io/sbf_link.png"><img src="/sponsors/sam_bankman_reeee.png" height="150"></a>
 
 # License
 Elratio is under the GPL 3.0 license, meaning every Elratio program is required to be open source. Having an Elratio program on your computer without a freely available mirror online is a violation of this license. Do not make us resort to violence.
