@@ -178,3 +178,7 @@ Elratio supports all existing Python packages! Packages do not need to be modifi
 
 # License
 Elratio is under the GPL 3.0 license, meaning every Elratio program is required to be open source. Having an Elratio program on your computer without a freely available mirror online is a violation of this license. Do not make us resort to violence.
+
+<!--
+You're still here? It's over. Go home.
+-->
