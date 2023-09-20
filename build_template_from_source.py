@@ -46,7 +46,7 @@ while cleanedCode[0] == "\\" and cleanedCode[1] == "n":
 while cleanedCode[-2] == "\\" and cleanedCode[-1] == "n":
     cleanedCode = cleanedCode[:-2]
 days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
-wrappedCode = "# Elratio compiler version "+str(abs(hash(cleanedCode)) % 10000000)+'.'+str(abs(hash(str(len(cleanedCode)))))+"."+days[abs(hash(cleanedCode)) % 7]+"\nexec(\"\"\"" + cleanedCode + "\"\"\")\n\n# Elratio program (all code must go inside the quotes)\n\'\'\'\n\n\'\'\'"
+wrappedCode = "# Elratio compiler version "+str(abs(hash(cleanedCode)) % 10000000)+'.'+str(abs(hash(str(len(cleanedCode)))) % 10000000)+"."+days[abs(hash(cleanedCode)) % 7]+"\nexec(\"\"\"" + cleanedCode + "\"\"\")\n\n# Elratio program (all code must go inside the quotes)\n\'\'\'\n\n\'\'\'"
 
 compilerFile = open('template.py', 'w')
 compilerFile.write(wrappedCode)
