@@ -1,0 +1,3 @@
+# Elratio has no requirements. Suck it JavaScript.
+# No external Python modules are used.
+# Also, no internal Python modules are used.
