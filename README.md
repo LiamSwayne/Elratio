@@ -3,7 +3,7 @@
     <img src="https://img.shields.io/badge/Visitor_IP_address-66.122.23.197-blue" height="25">
 </a>
 
-# [Final update.](https://github.com/LiamSwayne/Elratio/blob/main/announcements.md)
+# ~~Final update.~~ [Reverse-final update.](https://github.com/LiamSwayne/Elratio/blob/main/announcements.md)
 
 A Python-based programming language that combines the performance of Ruby with the readability of Perl.
 
