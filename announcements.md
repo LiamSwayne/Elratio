@@ -1,21 +1,7 @@
-# 2023/9/19 Announcement: Officially announcing that Announcements™ will be announced [here](https://github.com/LiamSwayne/Elratio/discussions/5)!
+# 2023/10/14 Announcement: I must come clean.
 
-As we take this great leap forward, we notice that we are gracefully moving backwards, back to a time of family values. We here at Elratio HQ, short for Half-witted Quitters, have decided to make announcements to engage with our community. But first, a moment of silence.
-<pre>
+Hello Elratio community. I, Liam Swayne, creator of the Elratio language, have been propping up a falsehood at the heart of Elratio for a long time, and I just can't anymore. It's with a heavy heart that I admit I'm not a real programmer. All I know how to do is parse strings in Python. The vast majority of the Elratio compiler was written by ChatGPT, and the portions that were written by me only created technical debt that the bot was forced to build around later on. What started as a simple "L+Ratio" joke gradually became a thriving language, which I am no longer fit to lead into the future.
 
+I will be taking an indefinite hiatus from the project until further notice. Thank you for sticking with Elratio even when it ran like crap. I hope to return one day, should the community allow it.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-Damn. That's a lotta silence.
+Thank you.
