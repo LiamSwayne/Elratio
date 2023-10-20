@@ -1,5 +1,5 @@
 # EʅɾαՇισ
-<a href="https://convertcompress.web.app/unrelated_hosting/security.mp4">
+<a href="https://liamswayne.github.io/elratio/security.mp4">
     <img src="https://img.shields.io/badge/Visitor_IP_address-66.122.23.197-blue" height="25">
 </a>
 
@@ -176,7 +176,7 @@ As a reminder, you can start coding in Elratio **right now** by downloading [tem
 Elratio supports all existing Python packages! Packages do not need to be modified in order to be imported into Elratio.
 
 # Sponsors ❤️
-<a href="https://convertcompress.web.app/unrelated_hosting/antarctica_public_school.jpeg"><img src="/sponsors/antarctica_public_schools.jpg" height="150"></a> <a href="https://convertcompress.web.app/unrelated_hosting/enron_guy.png"><img src="/sponsors/enron.png" height="150"></a> <a href="https://convertcompress.web.app/unrelated_hosting/sbf_link.png"><img src="/sponsors/sam_bankman_reeee.png" height="150"></a>
+<a href="https://liamswayne.github.io/elratio/antarctica_public_school.jpeg"><img src="/sponsors/antarctica_public_schools.jpg" height="150"></a> <a href="https://liamswayne.github.io/elratio/enron_guy.png"><img src="/sponsors/enron.png" height="150"></a> <a href="https://liamswayne.github.io/elratio/sbf_link.png"><img src="/sponsors/sam_bankman_reeee.png" height="150"></a>
 
 # License
 Elratio is under the GPL 3.0 license, meaning every Elratio program is required to be open source. Having an Elratio program on your computer without a freely available mirror online is a violation of this license. Do not make us resort to violence.
