@@ -16,8 +16,8 @@ jobs:
 
       - name: Configure Git identity
         run: |
-          git config --global user.email "liamtswayne@gmail.com"
-          git config --global user.name "LiamSwayne"
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
 
       - name: Execute python script
         run: python build_template_from_source.py
