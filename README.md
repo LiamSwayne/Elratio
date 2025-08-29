@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=LiamSwayne&project=Elratio&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # EʅɾαՇισ
 <a href="https://liamswayne.github.io/elratio/security.mp4">
     <img src="https://img.shields.io/badge/Visitor_IP_address-66.122.23.197-blue" height="25">
